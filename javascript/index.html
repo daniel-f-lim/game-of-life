@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<title>Game of Life</title>
+	<script src="library.js"></script>
+</head>
+
+<body>
+
+<h3>Game of Life</h3>
+
+<p>
+<h4 id="statusText">Iteration: 0</h4><br>
+<button type="button" name="iButton" onClick="grid=iterateLife(grid); drawGrid(context, grid); updateStatus(`statusText`);">iterate</button>
+</p>
+
+<canvas id="myCanvas" width="600" height="600"></canvas>
+
+<script>
+	var canv = document.getElementById("myCanvas");
+	var context = canv.getContext("2d");
+
+	drawSquare(context, 10, 10, true);
+
+	var grid = createGrid();
+
+	grid[10][50] = 1;
+	grid[10][51] = 1;
+	grid[10][52] = 1;
+	grid[10][53] = 1;
+	grid[10][54] = 1;
+	grid[10][55] = 1;
+	grid[11][50] = 1;
+	grid[11][51] = 1;
+	grid[11][52] = 1;
+	grid[12][53] = 1;
+	grid[12][54] = 1;
+	grid[12][55] = 1;
+
+	grid[50][50] = 1;
+	grid[51][50] = 1;
+	grid[50][51] = 1;
+	grid[51][51] = 1;
+
+	grid[61][61] = 1;
+	grid[61][62] = 1;
+	grid[61][63] = 1;
+
+	grid[70][10] = 1;
+	grid[71][10] = 1;
+	grid[72][10] = 1;
+	grid[69][11] = 1;
+	grid[70][11] = 1;
+	grid[71][11] = 1;
+
+	grid[25][25] = 1;
+	grid[26][25] = 1;
+	grid[27][25] = 1;
+	grid[27][24] = 1;
+	grid[26][23] = 1;
+
+	drawGrid(context, grid);
+</script>
+
+</body>
+
+</html>

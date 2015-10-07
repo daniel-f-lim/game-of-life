@@ -15,7 +15,7 @@ function drawSquare(ctxt, x, y, live) {
 
 function createGrid() {
 	var grid = new Array();
-	var row = new Array();
+	var row;
 
 	for (var i = 0; i < gridSize; i++) {
 		row = new Array();
